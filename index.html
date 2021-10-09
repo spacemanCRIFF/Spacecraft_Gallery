@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  
+
+  <title>Spacecraft Gallery</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.5/dist/splitting-cells.css">
+  
+<style>
+.tiler {
+  display: inline-block;
+  cursor: pointer;
+  visibility: hidden;
+  width: 33.3%;
+  margin: auto;
+}
+
+.tiler img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  visibility: visible;
+}
+
+.tiler .cell-grid {
+  background-position: center center;
+  margin: auto;
+  position: fixed;
+  top: 1em;
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
+  z-index: 10;
+  max-width: 1000px;
+  max-height: 600px;
+  perspective: 30px;
+}
+
+.tiler .cell {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateZ(-15px);
+  transform-style: preserve-3d;
+  transition-property: transform, opacity;
+  transition-duration: 0.5s, 0.4s;
+  transition-timing-function: cubic-bezier(0.65, 0.01, 0.15, 1.33);
+  /* The center character index */
+  --center-x: calc((var(--col-total) - 1) / 2);
+  --center-y: calc((var(--row-total) - 1) / 2);
+  /* Offset from center, positive & negative */
+  --offset-x: calc(var(--col-index) - var(--center-x));
+  --offset-y: calc(var(--row-index) - var(--center-y));
+  /* Absolute distance from center, only positive */
+  --distance-x: calc(
+    (var(--offset-x) * var(--offset-x)) / var(--center-x)
+  );
+  /* Absolute distance from center, only positive */
+  --distance-y: calc(
+    (var(--offset-y) * var(--offset-y)) / var(--center-y)
+  );
+  transition-delay: calc( 0.1s * var(--distance-y) + 0.1s * var(--distance-x) );
+}
+
+.tiler-overlay {
+  z-index: 2;
+}
+
+.tiler:hover .cell {
+  transform: scale(1);
+  opacity: 1;
+}
+
+html {
+  height: 100%;
+  display: flex;
+  background-image: url(images/stars.jfif);
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  padding: 2em;
+  margin: auto;
+}
+</style>
+
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+<link rel="stylesheet" href="https://codepen.io/shshaw/pen/5eb6d4e9bfd78e3911ed9d0d0dfce69b.css"></head>
+
+<body translate="no">
+  <a href="voyager.html" class="tiler layout cellColumns cellRows cells splitting" style="background-image: url(images/voyager1.1.jpg)">
+  <img src="images/voyager1.1.jpg">
+<span class="cell-grid"><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span></span></a>
+
+<a href="prometheus.html" class="tiler layout cellColumns cellRows cells splitting" style="background-image: url(images/prometheus1.1.jpg)">
+  <img src="images/prometheus1.1.jpg">
+<span class="cell-grid"><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span></span></a>
+
+<a href="swordfish.html" class="tiler layout cellColumns cellRows cells splitting" style="background-image: url(images/swordfish1.1.jpg)">
+  <img src="images/swordfish1.1.jpg">
+<span class="cell-grid"><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"></span></span></span></a>
+
+<a href="serenity.html" class="tiler layout cellColumns cellRows cells splitting" style="background-image: url(images/serenity1.1.jpg)">
+  <img src="images/serenity1.1.jpg">
+<span class="cell-grid"><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span></span></a>
+
+<a href="arwing.html" class="tiler layout cellColumns cellRows cells splitting" style="background-image: url(images/arwing1.1.jpg)">
+  <img src="images/arwing1.1.jpg">
+<span class="cell-grid"><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span></span></a>
+
+<a href="axiom.html" class="tiler layout cellColumns cellRows cells splitting" style="background-image: url(images/axiom1.1.jpg)">
+  <img src="images/axiom1.1.jpg">
+<span class="cell-grid"><span class="cell"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span></span></a>
+
+<a href="razorcrest.html" class="tiler layout cellColumns cellRows cells splitting" style="background-image: url(images/razorcrest1.1.jpg)">
+  <img src="images/razorcrest1.1.jpg">
+<span class="cell-grid"><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span></span></a>
+
+<a href="max.html" class="tiler layout cellColumns cellRows cells splitting" style="background-image: url(images/max1.1.jpg)">
+  <img src="images/max1.1.jpg">
+<span class="cell-grid"><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span></span></a>
+
+<a href="rocinante.html"  class="tiler layout cellColumns cellRows cells splitting" style="background-image: url(images/rocinante1.1.jpg)">
+  <img src="images/rocinante1.1.jpg">
+<span class="cell-grid"><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span><span class="cell"><span class="cell-inner"></span></span></span></a>
+
+  <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+
+  <script src="https://unpkg.com/splitting@1.0.5/dist/splitting.js"></script>
+      <script id="rendered-js">
+console.clear();
+
+Splitting({
+  target: ".tiler",
+  by: "cells",
+  rows: 3,
+  columns: 3,
+  image: true });
+//Image('.tiler-overlay', { rows: 3, cols: 3 });
+//# sourceURL=pen.js
+    </script>
+  </body>
+  </html>
+
+
