@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+      crossorigin="anonymous" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +11,22 @@
 </head>
 <body>
 <div class="container">
-<img class="centered" src="images/prometheus1.1.jpg" alt="Center Images" />
-<div class="prometheus"><a class="prometheuslink" href="https://www.youtube.com/watch?v=HHcHYisZFLU" target="_blank">
-    <span>PROMETHEUS</span></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;SHIP: PROMETHEUS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    CAPTAIN: IDRIS JANEK&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="home" href="index.html"><span>MENU</span></a></div>
+<img class="centered" src="images/prometheus.jpg" alt="Center Images" />
+<div class="prometheus">
+    PROMETHEUS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;SHIP: PROMETHEUS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    CAPTAIN: IDRIS JANEK
+    <footer class="footer">
+        <a class="footlink" href="index.html"><i class="fas fa-angle-double-left"></i></a>
+        <a class="footlink" href="voyager.html"><i class="fas fa-angle-left"></i></a>
+        <a class="footlink" href="trailer2.html"><i class="fas fa-play"></i></a>
+        <a class="footlink" href="swordfish.html"><i class="fas fa-angle-right"></i></a>
+      </footer>
+</div>
 </div>
 </body>
 <style>
     body {
-        background-color: black;
+        background-image: url(images/stars.jfif);
     }
     img.centered {
         height: 96vh;
@@ -26,23 +36,30 @@
     }
     .container {
         position: relative;
-        font-size: 4.25vh;
+        font-size: 4.75vh;
         color: #FFAC1C;
     }
     .prometheus {
+        width: 100%;
+        text-align: center;
         text-shadow: 1px 1px black;
         position: absolute;
-        right: auto;
-        left: 26vh;
-        bottom: 5vh;
+        bottom: 6vh;
     }
-    .home {
-        color: #FFAC1C;
-        text-shadow: 1px 1px black;
+   
+    footer {
+        position: relative;
+        top: 4vh;
+        bottom: 0vh;
+        width: 100%;
     }
-    .prometheuslink {
+    .footer {
+        font-size: 3vh;
+        text-align: center;
+    }
+    .footlink {
+        padding: 0 3vh 0 3vh;
         color: #FFAC1C;
-        text-shadow: 1px 1px black;
     }
 </style
 </html>

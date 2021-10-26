@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+      crossorigin="anonymous" rel="stylesheet">
+    <meta charset="UTF-8">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +12,21 @@
 </head>
 <body>
 <div class="container">
-<img class="centered" src="images/arwing1.1.jpg" alt="Center Images" />
-<div class="arwing"><a class="starfoxlink" href="https://www.youtube.com/watch?v=j-PZWTGLbFc" target="_blank">
-    <span>STARFOX</span></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;SHIP: ARWING&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    PILOT: FOX MCCLOUD&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="home" href="index.html"><span>MENU</span></a></div>
+<img class="centered" src="images/arwing.jpg" alt="Center Images" />
+<div class="arwing">
+    STARFOX&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;SHIP: ARWING&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    PILOT: FOX MCCLOUD
+    <footer class="footer">
+        <a class="footlink" href="index.html"><i class="fas fa-angle-double-left"></i></a>
+        <a class="footlink" href="serenity.html"><i class="fas fa-angle-left"></i></a>
+        <a class="footlink" href="trailer5.html"><i class="fas fa-play"></i></a>
+        <a class="footlink" href="axiom.html"><i class="fas fa-angle-right"></i></a>
+      </footer>
 </div>
 </body>
 <style>
     body {
-        background-color: black;
+        background-image: url(images/stars.jfif);
     }
     img.centered {
         height: 96vh;
@@ -30,19 +40,26 @@
         color: black;
     }
     .arwing {
+        width: 100%;
+        text-align: center;
         text-shadow: 1px 1px white;
         position: absolute;
-        right: auto;
-        left: 25vh;
-        bottom: 5vh;
+        bottom: 6vh;
     }
-    .home {
-        color: black;
-        text-shadow: 1px 1px white;
+    
+    footer {
+        position: relative;
+        top: 4vh;
+        bottom: 0vh;
+        width: 100%;
     }
-    .starfoxlink {
+    .footer {
+        font-size: 3vh;
+        text-align: center;
+    }
+    .footlink {
+        padding: 0 3vh 0 3vh;
         color: black;
-        text-shadow: 1px 1px white;
     }
 </style
 </html>

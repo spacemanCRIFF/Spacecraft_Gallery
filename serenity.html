@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+      crossorigin="anonymous" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +11,21 @@
 </head>
 <body>
 <div class="container">
-<img class="centered" src="images/serenity1.1.jpg" alt="Center Images" />
-<div class="serenity"><a class="fireflylink" href="https://www.youtube.com/watch?v=RC0WyXTpvoU" target="_blank">
-    <span>FIREFLY</span></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;SHIP: SERENITY&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    PILOT: MALCOM REYNOLDS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="home" href="index.html"><span>MENU</span></a></div>
+<img class="centered" src="images/serenity.jpg" alt="Center Images" />
+<div class="serenity">
+    FIREFLY&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;SHIP: SERENITY&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    PILOT: MALCOM REYNOLDS
+    <footer class="footer">
+        <a class="footlink" href="index.html"><i class="fas fa-angle-double-left"></i></a>
+        <a class="footlink" href="swordfish.html"><i class="fas fa-angle-left"></i></a>
+        <a class="footlink" href="trailer4.html"><i class="fas fa-play"></i></a>
+        <a class="footlink" href="arwing.html"><i class="fas fa-angle-right"></i></a>
+      </footer>
 </div>
 </body>
 <style>
     body {
-        background-color: black;
+        background-image: url(images/stars.jfif);
     }
     img.centered {
         height: 96vh;
@@ -30,19 +39,26 @@
         color: #00ff00;
     }
     .serenity {
+        width: 100%;
+        text-align: center;
         text-shadow: 1px 1px black;
         position: absolute;
-        right: auto;
-        left: 22vh;
-        bottom: 5vh;
+        bottom: 6vh;
     }
-    .home {
-        color: #00ff00;
-        text-shadow: 1px 1px black;
+    
+    footer {
+        position: relative;
+        top: 4vh;
+        bottom: 0vh;
+        width: 100%;
     }
-    .fireflylink {
+    .footer {
+        font-size: 3vh;
+        text-align: center;
+    }
+    .footlink {
+        padding: 0 3vh 0 3vh;
         color: #00ff00;
-        text-shadow: 1px 1px black;
     }
 </style
 </html>
